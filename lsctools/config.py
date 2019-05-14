@@ -4,7 +4,7 @@ from os.path import dirname
 options = {'nominalTitle': 'Nominal Position [#mum]'}
 EOSPATH = '/eos/cms/store/group'
 OUTPATH = dirname(__file__)+'/../results'
-OWNPATH = '/afs/cern.ch/work/j/joknolle/store'
+OWNPATH = '/eos/cms/store/user/capalmer/lengthScale'
 
 def PCC():
     """Set common parameters of PCC data sets"""
@@ -276,6 +276,8 @@ def PCC2016ReRecoJan2017():
                             '130_084911'), (5, 4, '213_002332'), (6, 1, \
                             '130_084929'), (7, 3, '213_002401'), (8, 1, \
                             '130_084943'))]
+
+    options['fulltrees'] = ['/comm_luminosity/PCC/VdM/May2016Scans/PCC_Run2016B-17Jan2017-v1_ZeroBiasALL_LengthScale/']
     options['minitrees'] = [s+'_FPix_Feb27' for s in options['fulltrees']]
     # options['dataset'] = ['2016_rereco_jan17', \
     #                       '2016 ReReco Jan 2017']
